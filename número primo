@@ -1,0 +1,24 @@
+# n == 5; mostre n termos primos (2, 3, 5, 7, 11)
+quantidade = int(input('quantos números primos você quer? '))
+primo = 0
+cont = 0
+num = 2
+igual = 0
+while True:
+    cont += 1
+    divi = num % cont
+    if divi == 0:
+        igual += 1
+        if num == cont and igual == 2:
+            primo += 1
+            igual = 0
+            cont = 0
+            if primo != quantidade or primo == quantidade:               
+                print(num)
+                num += 1
+                if primo == quantidade:
+                    break
+    if num == cont:
+        num +=1
+        igual = 0
+        cont = 0
